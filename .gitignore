@@ -1,0 +1,10 @@
+.DS_Store
+.vscode/
+node_modules/
+public/
+/node_modules
+/npm-debug.log
+/build
+/coverage
+/.idea
+/.vscode
