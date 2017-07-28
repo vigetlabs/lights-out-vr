@@ -13,11 +13,7 @@ import dstrips from '../assets/img/dstrips.png'
 import hstrips from '../assets/img/hstrips.png'
 import vstrips from '../assets/img/vstrips.png'
 import dots from '../assets/img/dots.png'
-import waves from '../assets/img/waves.png'
-// import glowSound from '../assets/audio/glow.ogg'
 import toggleSound from '../assets/audio/click.ogg'
-
-// <audio crossOrigin id="glowSound" src={glowSound} />
 
 const Assets = () => {
   return (
