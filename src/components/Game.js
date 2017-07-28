@@ -76,7 +76,12 @@ export default class Game extends Presenter {
       <MainScene>
         <Assets />
 
-        <Sky />
+        <Sky
+          topColor="17 17 25"
+          bottomColor="24 17 17"
+          exponent="1.5"
+          offset="1500.0"
+        />
 
         <Particles />
 
