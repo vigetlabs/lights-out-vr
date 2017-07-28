@@ -17,7 +17,7 @@ void main() {
     vec3 tColor = vec3(r, g, b);
 
     float hue = normalize(vWorldPosition + offset).z;
-    float blendFactor = max(pow(max(hue, 0.0),exponent), 0.0);
+    float blendFactor = max(pow(max(hue, 0.0), exponent), 0.1);
     vec3 mixedColor = mix(bColor, tColor, blendFactor);
 
     // Final color outputted to the screen
