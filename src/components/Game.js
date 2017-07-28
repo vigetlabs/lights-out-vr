@@ -19,12 +19,6 @@ import Sky from './Sky'
 import Timer from './Timer'
 
 export default class Game extends Presenter {
-  componentDidMount() {
-    document.querySelector('a-assets').addEventListener('loaded', () => {
-      // this.repo.push(ready)
-    })
-  }
-
   getModel() {
     return {
       games: state => state.game.games,
