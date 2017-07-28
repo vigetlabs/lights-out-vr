@@ -16,9 +16,10 @@ void main() {
     b = topColor.z / 255.0;
     vec3 tColor = vec3(r, g, b);
 
-    float h = normalize(vWorldPosition + offset).z;
-    float interp = max( pow( max( -h, 0.0 ), exponent ), 0.0 );
-    vec3 mixedColor = mix(bColor, tColor, interp)
+    float hue = normalize(vWorldPosition + offset).z;
+    float blendFactor = max(pow(max(hue, 0.0),exponent), 0.0);
+    vec3 mixedColor = mix(bColor, tColor, blendFactor);
 
+    // Final color outputted to the screen
     gl_FragColor = vec4(mixedColor, 1.0);
 }
