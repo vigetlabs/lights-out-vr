@@ -1,4 +1,4 @@
-<h1 align="center">aframe-preact</h1>
+<h1 align="center">Lights Out VR!</h1>
 
 <br/>
 
@@ -7,59 +7,21 @@
 </div>
 
 <h5 align="center">
-  Build virtual reality experiences with <b><a href="https://aframe.io">A-Frame</a></b> and <b><a href="https://preactjs.com/">Preact</a></b>.
+  A WebVR rendition of the 90's classic Lights Out with <b><a href="https://aframe.io">A-Frame</a></b> + <b><a href="https://preactjs.com/">Preact</a></b> + <b><a href="http://code.viget.com/microcosm">Microcosm</a></b>.
 </h5>
 
 ## Getting Started
 
 * Install (if you don't have them):
     * [Node.js](http://nodejs.org): `brew install node` on OS X
-    * [Brunch](http://brunch.io): `npm install -g brunch`
-    * Brunch plugins and app dependencies: `npm install`
+    * [Yarn](http://yarnpkg.com): `npm install -g yarn`
+    * `yarn install` to install dependencies
 * Run:
-    * `npm start` — watches the project with continuous rebuild. This will also launch HTTP server with [pushState](https://developer.mozilla.org/en-US/docs/Web/Guide/API/DOM/Manipulating_the_browser_history).
-    * `npm run build` — builds minified project for production
-* Learn:
-    * `public/` dir is fully auto-generated and served by HTTP server.  Write your code in `app/` dir.
-    * Place static files you want to be copied from `app/assets/` to `public/`.
-    * [Brunch site](http://brunch.io), [Getting started guide](https://github.com/brunch/brunch-guide#readme)
-  
-Install with [npm](https://www.npmjs.com/package/aframe-preact) or
-[yarn](https://github.com/yarnpkg/yarn).
+    * `yarn start` — watches the project with continuous rebuild.
+* Build + Deploy:
+    * `yarn build` — builds the project for production into the `build` directory.
+    * `yarn deploy` to publish the contents of the `build` folder to the `gh-pages` branch.
 
-```
-npm install --save aframe aframe-react react react-dom
-yarn add --save aframe aframe-react react react-dom
-```
-
-
-## Example
-
-```javascript
-import 'aframe'
-import { h, Component, render } from 'preact'
-import { Entity, Scene } from 'aframe-react'
-import 'aframe-particle-system-component'
-import 'aframe-animation-component'
-
-class App extends React.Component {
-  render () {
-    return (
-      <Scene>
-        <Entity geometry={{primitive: 'box'}} material={{color: 'red'}} position={{x: 0, y: 0, z: -5}}/>
-        <Entity particle-system={{preset: 'snow'}}/>
-        <Entity light={{type: 'point'}}/>
-        <Entity gltf-model={{src: 'virtualcity.gltf'}}/>
-        <Entity text={{value: 'Hello, WebVR!'}}/>
-      </Scene>
-    );
-  }
-}
-
-document.addEventListener('DOMContentLoaded', () => {
-  render(<App />, document.querySelector('#app'))
-})
-```
 
 The following has been extracted from the [aframe-react](https://github.com/aframevr/aframe-react) page, but the same concepts still apply to Preact.
 
