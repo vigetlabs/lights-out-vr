@@ -13,9 +13,7 @@ class TimerEffect {
   }
 
   startTimer(repo) {
-    this.interval = setInterval(() => {
-      repo.push(tickTimer)
-    }, 1000)
+    this.interval = setInterval(repo.prepare(tickTimer), 1000)
   }
 
   stopTimer(repo) {
