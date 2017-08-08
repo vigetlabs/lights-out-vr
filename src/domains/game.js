@@ -35,9 +35,6 @@ const Game = {
     const { y, x } = payload
     const computedMatrix = computeNewMatrix(state.lights, { y, x })
 
-    // computedMatrix.map(x => console.info('row:', x.toString()))
-    console.info('flick :: x:', x, 'y:', y)
-
     return {
       ...state,
       hasWon: verifyCompletion(computedMatrix),
